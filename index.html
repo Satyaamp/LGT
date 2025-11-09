@@ -75,61 +75,74 @@
     </section>
     
 
-  <section id="services" class="services-hero bg-rice">
-    <div class="services-overlay"></div>
-    <div class="services-container">
-        <div class="services-header">
-            <h2 class="section-title animate-on-scroll">Our Services</h2>
-        </div>
-        <div class="services-content">
-            <div class="services-left">
-
-                <div class="service-description-content active" data-service="rice">
-                    <h2 class="services-main-title">Rice</h2>
-                    <p class="services-description">We are the exporter of Non basmati rice, basmati rice, brown rice and broken rice etc.</p>
-                    <p class="services-description">We deal with Africa and China for non-basmati and broken rice. In Europe and Saudi Arabia, we supply brown rice and basmati rice.</p>
-                </div>
-
-                <div class="service-description-content" data-service="agri-products">
-                    <h2 class="services-main-title">Agri-Products</h2>
-                    <p class="services-description">Groundnut, cumin, sesame seed, and DOC cattle feed are directly exported to Vietnam, China, Bangladesh, Indonesia, and Korea.</p>
-                    <p class="services-description">We import Mutter cheek pea, Masoor Dal etc. from Russia, Canada, Ukraine and Africa.</p>
-                </div>
-
-                <div class="service-description-content" data-service="salt">
-                    <h2 class="services-main-title">Salt</h2>
-                    <p class="services-description">We export Sea Salt/Raw Salt, Crystal Salt, Iodised, Double Refined & Triple Refined Salt.</p>
-                    <p class="services-description">Countries served: Indonesia, Africa, Sri Lanka, Bangladesh.</p>
-                </div>
-
-                <div class="service-description-content" data-service="scrap">
-                    <h2 class="services-main-title">Scrap</h2>
-                    <p class="services-description">We deal in Copper, Aluminium, Brass, Iron, Steel & Metal Waste.</p>
-                    <p class="services-description">Scrap imported majorly from UK & Africa.</p>
-                </div>
-
+   <section id="services" class="services-hero bg-rice">
+        <div class="services-overlay"></div>
+        <div class="services-container">
+            <div class="services-header">
+                <h2 class="section-title animate-on-scroll">Our Services</h2>
             </div>
+            <div class="services-content">
+                <div class="services-left">
 
-            <div class="services-right">
-                <div class="service-item active" data-target="rice">
-                    <span class="service-name">RICE</span><div class="service-line"></div>
+                    <div class="service-description-content active" data-service="rice">
+                        <h2 class="services-main-title">Rice</h2>
+                        <p class="services-description">We are the exporter of Non basmati rice, basmati rice, brown rice and broken rice etc.</p>
+                        <p class="services-description">We deal with Africa and China for non-basmati and broken rice. In Europe and Saudi Arabia, we supply brown rice and basmati rice.</p>
+                    </div>
+
+                    <div class="service-description-content" data-service="agri-products">
+                        <h2 class="services-main-title">Agri-Products</h2>
+                        <p class="services-description">Groundnut, cumin, sesame seed, and DOC cattle feed are directly exported to Vietnam, China, Bangladesh, Indonesia, and Korea.</p>
+                        <p class="services-description">We import Mutter cheek pea, Masoor Dal etc. from Russia, Canada, Ukraine and Africa.</p>
+                    </div>
+
+                    <div class="service-description-content" data-service="salt">
+                        <h2 class="services-main-title">Salt</h2>
+                        <p class="services-description">We export Sea Salt/Raw Salt, Crystal Salt, Iodised, Double Refined & Triple Refined Salt.</p>
+                        <p class="services-description">Countries served: Indonesia, Africa, Sri Lanka, Bangladesh.</p>
+                    </div>
+
+                    <div class="service-description-content" data-service="scrap">
+                        <h2 class="services-main-title">Scrap</h2>
+                        <p class="services-description">We deal in Copper, Aluminium, Brass, Iron, Steel & Metal Waste.</p>
+                        <p class="services-description">Scrap imported majorly from UK & Africa.</p>
+                    </div>
+
                 </div>
-                <div class="service-item" data-target="agri-products">
-                    <span class="service-name">AGRI-PRODUCTS</span><div class="service-line"></div>
-                </div>
-                <div class="service-item" data-target="salt">
-                    <span class="service-name">SALT</span><div class="service-line"></div>
-                </div>
-                <div class="service-item" data-target="scrap">
-                    <span class="service-name">SCRAP</span><div class="service-line"></div>
+
+                <div class="services-right">
+                    <div class="service-item active" data-target="rice">
+                        <span class="service-name">RICE</span><div class="service-line"></div>
+                    </div>
+                    <div class="service-item" data-target="agri-products">
+                        <span class="service-name">AGRI-PRODUCTS</span><div class="service-line"></div>
+                    </div>
+                    <div class="service-item" data-target="salt">
+                        <span class="service-name">SALT</span><div class="service-line"></div>
+                    </div>
+                    <div class="service-item" data-target="scrap">
+                        <span class="service-name">SCRAP</span><div class="service-line"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section id="about" class="about">
+        <style>
+            .service-description-content {
+                display: none;
+                animation: fadeIn 0.6s ease;
+            }
+            .service-description-content.active {
+                display: block;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
         <div class="container">
             <h2 class="section-title animate-on-scroll">Coal Traders & Miners</h2>
             <br>
@@ -248,16 +261,7 @@
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/916353348497" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  
 
     <footer>
         <div class="container">
@@ -271,6 +275,16 @@
             </div>
         </div>
     </footer>
+      <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916353348497" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 
