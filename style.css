@@ -385,7 +385,6 @@ header.scrolled .logo img {
             margin-bottom: 2rem;
             line-height: 1.2;
             letter-spacing: -1px;
-            transform: translateX(30px);
         }
 
         .services-description {
@@ -393,10 +392,19 @@ header.scrolled .logo img {
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
-            transform: translateX(30px);
+
         }
 
+        .service-description-content.active,
+        .services-main-title,
+        .services-description {
+            animation: fadeIn 0.6s ease forwards;
+        }
 
+        .services-left {
+            overflow-x: hidden;
+        }
+        
         .services-read-more {
             display: inline-flex;
             align-items: center;
