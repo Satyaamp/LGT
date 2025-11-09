@@ -238,27 +238,33 @@
             }
         });
 
+        // Back to Top button logic
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) { // Show button after scrolling 300px
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+        }
+
+
         // Interactive Services Section
         const serviceItems = document.querySelectorAll('.service-item');
         const serviceContents = document.querySelectorAll('.service-description-content');
 
         // Add a background container
-        const servicesHero = document.querySelector('.services-hero');
-        const bgContainer = document.createElement('div');
-        bgContainer.className = 'services-hero-bg';
-        servicesHero.prepend(bgContainer);
-
-        const serviceBackgrounds = { rice: "0.jpg", "agri-products": "4.jpg", salt: "5.jpg", scrap: "6.jpg" };
+        const servicesHero = document.querySelector('.services-hero'); // The main section
 
         serviceItems.forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('mouseenter', () => { 
                 const targetService = item.getAttribute('data-target');
 
-                // Update active state for the clicked item
                 serviceItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
 
-                // Show the corresponding content
                 serviceContents.forEach(content => {
                     if (content.getAttribute('data-service') === targetService) {
                         content.classList.add('active');
@@ -267,33 +273,10 @@
                     }
                 });
 
-                // Update background image with cross-fade
-                const newBgImage = serviceBackgrounds[targetService];
-                if (newBgImage) {
-                    bgContainer.style.backgroundImage = `url('${newBgImage}')`;
-                    bgContainer.style.opacity = 1;
-                }
+                servicesHero.classList.remove("bg-rice", "bg-agri", "bg-salt", "bg-scrap");
+                if (targetService === "rice") servicesHero.classList.add("bg-rice");
+                if (targetService === "agri-products") servicesHero.classList.add("bg-agri");
+                if (targetService === "salt") servicesHero.classList.add("bg-salt");
+                if (targetService === "scrap") servicesHero.classList.add("bg-scrap");
             });
         });
-
-
-        document.querySelectorAll(".service-item").forEach(item => {
-    item.addEventListener("click", () => {
-
-        const target = item.getAttribute("data-target");
-        const hero = document.querySelector(".services-hero");
-
-        // remove previous active item
-        document.querySelectorAll(".service-item").forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-
-        // remove all background classes
-        hero.classList.remove("bg-rice", "bg-agri", "bg-salt", "bg-scrap");
-
-        // add background according to selection
-        if (target === "rice") hero.classList.add("bg-rice");
-        if (target === "agri-products") hero.classList.add("bg-agri");
-        if (target === "salt") hero.classList.add("bg-salt");
-        if (target === "scrap") hero.classList.add("bg-scrap");
-    });
-});
